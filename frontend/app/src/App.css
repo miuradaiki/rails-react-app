@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.body {
+  width: 700px;
+  margin: 0 auto;
+}
+
+.search-form {
+  font-size: 20px;
+  width: 100%;
+  height: 40px;
+  margin: 10px 0;
+  padding: 10px;
+}
