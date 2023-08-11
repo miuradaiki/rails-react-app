@@ -154,10 +154,11 @@ function App() {
               <div>
                 {val.name}
               </div>
-              {/* 編集リンク追加する */}
-              <EditButton>
-                <AiFillEdit />
-              </EditButton>
+              <a href={"/todos/" + val.id + "/edit"}>
+                <EditButton>
+                  <AiFillEdit />
+                </EditButton>
+              </a>
             </Row>
           ))}
         </div>
