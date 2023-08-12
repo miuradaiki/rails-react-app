@@ -2,8 +2,8 @@ import React from 'react'
 import { Routes, Route, Link } from 'react-router-dom'
 import styled from 'styled-components'
 import TodoList from './components/TodoList'
-// import AddTodo from './AddTodo'
-// import EditTodo from './EditTodo'
+import AddTodo from './components/AddTodo'
+// import EditTodo from './components/EditTodo'
 import './App.css'
 
 const Navbar = styled.nav`
@@ -66,7 +66,7 @@ function App() {
       <Wrapper>
         <Routes>
           <Route path="/todos" element={<TodoList />} />
-          {/* <Route path="/todos/new" element={<AddTodo />} /> */}
+          <Route path="/todos/new" element={<AddTodo />} />
           {/* <Route path="/todos/:id/edit" element={<EditTodo />} /> */}
         </Routes>
       </Wrapper>
