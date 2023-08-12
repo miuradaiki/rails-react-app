@@ -5,6 +5,7 @@ import axios from 'axios';
 import { ImCheckboxChecked, ImCheckboxUnchecked } from 'react-icons/im';
 import styled from 'styled-components';
 import { AiFillEdit } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 
 interface Todo {
   id: number;
@@ -154,11 +155,11 @@ function App() {
               <div>
                 {val.name}
               </div>
-              <a href={"/todos/" + val.id + "/edit"}>
+              <Link to={"/todos/" + val.id + "/edit"}>
                 <EditButton>
                   <AiFillEdit />
                 </EditButton>
-              </a>
+              </Link>
             </Row>
           ))}
         </div>
