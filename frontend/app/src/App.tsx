@@ -3,7 +3,7 @@ import { Routes, Route, Link } from 'react-router-dom'
 import styled from 'styled-components'
 import TodoList from './components/TodoList'
 import AddTodo from './components/AddTodo'
-// import EditTodo from './components/EditTodo'
+import EditTodo from './components/EditTodo'
 import './App.css'
 
 const Navbar = styled.nav`
@@ -67,7 +67,7 @@ function App() {
         <Routes>
           <Route path="/todos" element={<TodoList />} />
           <Route path="/todos/new" element={<AddTodo />} />
-          {/* <Route path="/todos/:id/edit" element={<EditTodo />} /> */}
+          <Route path="/todos/:id/edit" element={<EditTodo />} />
         </Routes>
       </Wrapper>
     </>
