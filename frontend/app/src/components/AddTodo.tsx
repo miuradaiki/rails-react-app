@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import styled from 'styled-components'
-import { toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { FiSend } from 'react-icons/fi'
+import { useNavigate } from 'react-router-dom'
 
 const InputAndButton = styled.div`
   display: flex;
@@ -40,15 +40,9 @@ const Icon = styled.span`
   margin: 0 7px;
 `
 
-// toast.configure()
+function AddTodo() {
+  const navigation = useNavigate();
 
-interface AddTodoProps {
-  // history: {
-  //   push: (path: string) => void;
-  // };
-}
-
-const AddTodo: React.FC<AddTodoProps> = (props) => {
   const initialTodoState = {
     id: null,
     name: "",
@@ -74,7 +68,7 @@ const AddTodo: React.FC<AddTodoProps> = (props) => {
           name: resp.data.name,
           is_completed: resp.data.is_completed,
         });
-        // props.history.push("/todos");
+        navigation(-1);
       })
       .catch(e => {
         console.log(e);
