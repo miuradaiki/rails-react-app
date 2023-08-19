@@ -1,16 +1,16 @@
 FROM node:lts-slim
 
-WORKDIR /front
+WORKDIR /app
 
-ENV CI=true
+ENV HOST=0.0.0.0
 
 # 依存関係のインストール
-COPY package*.json ./
+COPY app/package*.json /app/
 RUN npm install
 
 # アプリケーションのビルド
-COPY . .
+COPY app/ /app/
 RUN npm run build
 
 # ビルド済みアプリケーションを実行
-CMD ["npx", "serve", "-s", "build"]
+CMD ["npm", "start"]
